@@ -12,7 +12,8 @@ raw_students = [
 cleaned_students = []
 
 for s in raw_students:
-    name = s["name"].strip().title()
+# cleaning name (removing spaces and fixing case)
+name = s["name"].strip().title()
     roll = int(s["roll"])
     marks = list(map(int, s["marks_str"].split(", ")))
 
